@@ -12,8 +12,10 @@ devtools::install_github("smbache/zeroclipr")
 ```
 
 ### Example Usage
-This example shows how to setup a button for copying data as csv to clipboard
+So far, there is only one `UI` component, `zeroclipButton`. This can be used either directly in the UI
+for a static copy-text, or with `renderUI` for a reactive copy-text.
 
+This example shows how to setup a button for copying data as csv to clipboard:
 
 ```R
 runApp(list(
