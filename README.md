@@ -18,6 +18,9 @@ for a static copy-text, or with `renderUI` for a reactive copy-text.
 This example shows how to setup a button for copying data as csv to clipboard:
 
 ```R
+library(zeroclipr)
+library(shiny)
+
 runApp(list(
 
   # The UI
