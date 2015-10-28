@@ -1,0 +1,10 @@
+Package: zeroclipr
+Type: Package
+Title: Simple Shiny/R Wrapper for ZeroClipboard
+Version: 0.1
+Author: Stefan Milton Bache
+Maintainer: Stefan Milton Bache <stefan@stefanbache.dk>
+Description: Clipboard Buttons for Shiny/R Applications using the
+  ZeroClipboard js library.
+License: file LICENSE
+Imports: shiny
