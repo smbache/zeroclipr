@@ -10,16 +10,14 @@
 #'
 #' @return htmlOutput
 #'
-#' @importFrom shiny tagList tags actionButton singleton
+#' @importFrom shiny tagList tags actionButton
 #' @export
 zeroclipButton <- function(inputId, label, clipText, icon = NULL, width = NULL)
 {
   tagList(
-    singleton(tags$head(tags$script(src = "zeroclipr/ZeroClipboard.js"))),
-    singleton(tags$head(tags$script('ZeroClipboard.config( { swfPath: "./zeroclipr/ZeroClipboard.swf" } );'))),
-    actionButton(inputId = inputId, label = label, icon = icon, width = NULL,
-                 `data-clipboard-text` = clipText),
-    tags$script(sprintf('var client_%s = new ZeroClipboard( $("#%1$s") );',
-                        inputId))
+    zeroclipboard_setup(),
+    actionButton(inputId = inputId, label = label, icon = icon,
+                 width = NULL, `data-clipboard-text` = clipText),
+    tags$script(sprintf('var client_%s = new ZeroClipboard( $("#%1$s") );', inputId))
   )
 }
